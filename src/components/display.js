@@ -6,6 +6,8 @@ class Display extends Component {
   constructor(props) {
     super(props);
   }
+
+
   render() {
     let empty = <div></div>;
     let upperDisplay = this.props.power ? this.props.upperDisplay : empty;

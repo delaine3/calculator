@@ -9,6 +9,8 @@ export const numberList = [
   { id: "eight", num: 8 },
   { id: "nine", num: 9 },
   { id: "zero", num: 0 },
+  { id: "decimal", num: "." },
+
 ];
 
 export const opperationList = [

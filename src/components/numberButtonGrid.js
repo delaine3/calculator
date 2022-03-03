@@ -10,14 +10,19 @@ class NumberButtonGrid extends Component {
     this.decimal = this.decimal.bind(this);
   }
   decimal(event) {
-    if (!this.props.decimal) {
+   
+   /* if (!this.props.decimal) {
       this.props.clearZeros();
       this.props.addDecimal(true);
       this.props.updateUpperDisplay(".");
       this.props.updateLowerDisplay(".");
       this.props.addOpperator(false);
-    }
-    console.log(this.props.power);
+    } */
+    
+    /* if (this.props.upperDisplay.innerHTML.indexOf(".") === -1 || this.props.lowerDisplay.innerHTML.indexOf(".") === -1) {
+      this.props.updateUpperDisplay(".");
+      this.props.updateLowerDisplay(".");
+    }*/
   }
 
   render() {
@@ -32,14 +37,7 @@ class NumberButtonGrid extends Component {
     return (
       <div className="center number-grid">
         {Display}
-        <button
-          onClick={(event) => {
-            this.decimal(event);
-          }}
-          id="decimal"
-        >
-          .
-        </button>
+       
       </div>
     );
   }

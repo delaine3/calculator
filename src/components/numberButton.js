@@ -6,25 +6,67 @@ class NumberButton extends Component {
   constructor(props) {
     super(props);
     this.updateDisplay = this.updateDisplay.bind(this);
+
+    this.state = {
+     zeros: []
+    }
   }
 
   updateDisplay(event) {
-    let zeroRegex2 = /^0\d+/gm;
-    //If the number in the upper display starts with a 0 followed by digits, drop a zero
-    if (zeroRegex2.test(this.props.upperDisplay)) {
-      this.props.updateUpperDisplay(this.props.lowerDisplay.shift());
-      this.props.updateLowerDisplay(this.props.upperDisplay.shift());
+
+    //console.log("Lower Display list : " + this.props.lowerDisplay)
+    //console.log("Lower Display last element : " + this.props.lowerDisplay[this.props.lowerDisplay.length -1])
+    //console.log("Lower Display 1st element : " +this.props.lowerDisplay[0])
+    //console.log("id = " + event.target.id)
+
+    if(event.target.id === "decimal"){
+
+      if(!(this.props.lowerDisplay.includes("."))) {
+
+        this.props.updateUpperDisplay(".");
+        this.props.updateLowerDisplay(".");
+        this.props.addOpperator(false);
+        
+        return
+      }else{
+        return
+      }
     }
-    //add to the 0's list, whatever number has  been clicked
-    this.props.addZeros(this.props.num);
-    //If the number in the zeros tracker does not start with a 0, update the display
-    let zeroRegex = /^0{1}/gm;
-    if (!zeroRegex.test(this.props.zeros)) {
+    const totalZeros = this.state.zeros + 1;
+console.log("fIRST ELEMENT : " + this.props.lowerDisplay[0] )
+    if(event.target.id === "zero"){
+      console.log("wE HAVE A " + event.target.id)
+      //console.log("First Item In Lower Display " + this.props.lowerDisplay[0] )
+    console.log("Lower Display LENGHT : " +this.props.lowerDisplay.length)
+
+      if((this.props.lowerDisplay.length < 2   )){
+        console.log('Less than 2')
+       // if((this.props.lowerDisplay[0] == 0) || ((this.props.lowerDisplay[0] == undefined) && (this.props.lowerDisplay[1] == 0))){
+       if((this.props.lowerDisplay[0] == 0) || (this.props.lowerDisplay[0] == undefined)){
+  
+       console.log('lowerDisplay[0] == 0 or Undefined ')
+ 
+          return
+        }else{
+
+          this.setState({zeros: totalZeros});
+          this.props.updateUpperDisplay("0");
+          this.props.updateLowerDisplay("0");
+          this.props.addOpperator(false);
+          return
+        }
+      }else{
+        this.props.updateUpperDisplay(this.props.num);
+        this.props.updateLowerDisplay(this.props.num);
+        this.props.addOpperator(false);
+        return
+      }
+    }
       this.props.updateUpperDisplay(this.props.num);
       this.props.updateLowerDisplay(this.props.num);
       this.props.addOpperator(false);
-    } else {
-    }
+    
+
   }
   render() {
     return (
