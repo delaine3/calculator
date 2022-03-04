@@ -11,15 +11,33 @@ class OpperationButton extends Component {
   updateDisplay(event) {
     let display = document.getElementById(this.props.id);
 
-    if (this.props.opperator === false) {
+  
       this.props.addDecimal(false);
-      this.props.clearZeros();
-      this.props.addOpperator(true);
       this.props.updateUpperDisplay(this.props.op);
-      this.props.clearLowerDisplay();
       this.props.updateLowerDisplay(this.props.op);
+      this.props.clearLowerDisplay();
+
       if (display.id === "equals") {
         this.props.expEvaluated(true);
+        this.props.clearLowerDisplay();
+
+        let opperators = ["+","*", "/"];
+
+        const filterOpperators = this.props.upperDisplay.filter(value=>opperators.includes(value));
+        console.log(filterOpperators)
+
+      filterOpperators.pop()
+       
+
+        console.log("filterOpperators last element : " + filterOpperators[filterOpperators.length -1])
+        
+        var filtered = this.props.upperDisplay.filter(function(value, index, arr){ 
+          //console.log(filterOpperators.indexOf(value))
+          return !(filterOpperators.includes(value)) ;
+      });
+      
+        console.log("FILTERED UPPER DISPLAY : " +filtered)
+        console.log("UPPER DISPLAY : " +  this.props.upperDisplay)
 
         const convertToString = this.props.upperDisplay.toString();
         var cleanedExpression = convertToString.replace(/,/g, "");
@@ -39,7 +57,7 @@ class OpperationButton extends Component {
           this.props.addOpperator(false);
         }
       }
-    }
+    
   }
 
   render() {

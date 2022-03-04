@@ -33,19 +33,11 @@ class NumberButton extends Component {
       }
     }
     const totalZeros = this.state.zeros + 1;
-console.log("fIRST ELEMENT : " + this.props.lowerDisplay[0] )
     if(event.target.id === "zero"){
-      console.log("wE HAVE A " + event.target.id)
-      //console.log("First Item In Lower Display " + this.props.lowerDisplay[0] )
-    console.log("Lower Display LENGHT : " +this.props.lowerDisplay.length)
 
-      if((this.props.lowerDisplay.length < 2   )){
-        console.log('Less than 2')
-       // if((this.props.lowerDisplay[0] == 0) || ((this.props.lowerDisplay[0] == undefined) && (this.props.lowerDisplay[1] == 0))){
+      if((this.props.lowerDisplay.length < 2 )){
        if((this.props.lowerDisplay[0] == 0) || (this.props.lowerDisplay[0] == undefined)){
   
-       console.log('lowerDisplay[0] == 0 or Undefined ')
- 
           return
         }else{
 

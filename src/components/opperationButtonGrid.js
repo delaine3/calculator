@@ -26,6 +26,7 @@ class OpperationButtonGrid extends Component {
     return (
       <div class="center number-grid">
         {Display}
+        
         <button
           onClick={(event) => {
             this.clearDisplay(event);
@@ -34,6 +35,7 @@ class OpperationButtonGrid extends Component {
         >
           Clear
         </button>
+
       </div>
     );
   }
