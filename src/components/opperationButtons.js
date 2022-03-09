@@ -11,36 +11,14 @@ class OpperationButton extends Component {
   updateDisplay(event) {
     let display = document.getElementById(this.props.id);
 
-  
       this.props.addDecimal(false);
+      this.props.clearZeros();
+      this.props.addOpperator(true);
       this.props.updateUpperDisplay(this.props.op);
+      this.props.clearLowerDisplay();
       this.props.updateLowerDisplay(this.props.op);
-
       if (display.id === "equals") {
         this.props.expEvaluated(true);
-        this.props.clearLowerDisplay();
-
-        let opperators = ["+","*", "/"];
-
-        const filterOpperators = this.props.upperDisplay.filter(value=>opperators.includes(value));
-        console.log(filterOpperators)
-
-      filterOpperators.pop()
-       
-
-        console.log("filterOpperators last element : " + filterOpperators[filterOpperators.length -1])
-        
-        var filtered = this.props.upperDisplay.filter(function(value, index, arr){ 
-          //console.log(filterOpperators.indexOf(value))
-          return !(filterOpperators.includes(value)) ;
-      });
-       
-      //let filtered2 = this.props.upperDisplay.match(/(\*|\+|\/|-)?(\.|\-)?\d+/g).join('');
-      //console.log("FILTERED 2 : " +filtered2)
-
-
-        console.log("FILTERED UPPER DISPLAY : " +filtered)
-        console.log("UPPER DISPLAY : " +  this.props.upperDisplay)
 
         const convertToString = this.props.upperDisplay.toString();
         var cleanedExpression = convertToString.replace(/,/g, "");

@@ -15,7 +15,7 @@ class Display extends Component {
 
     return (
       <div className="center">
-        <div className="upperDisplay" id="display">
+        <div className="upperDisplay">
           {upperDisplay != "" ? upperDisplay : "0"}
         </div>
         <div className="lowerDisplay" id="display">

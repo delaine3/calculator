@@ -5,9 +5,7 @@ import { opperationList } from "./buttonsTops";
 import OpperationButton from "./opperationButtons";
 
 class OpperationButtonGrid extends Component {
-  constructor(props) {
-    super(props);
-  }
+ 
   clearDisplay(event) {
     this.props.clearLowerDisplay();
     this.props.clearUpperDisplay();
@@ -17,25 +15,24 @@ class OpperationButtonGrid extends Component {
   }
   render() {
     let OpperationButtonGrid = opperationList.map((opperation) => {
-      return <OpperationButton op={opperation.op} id={opperation.id} />;
+      return <OpperationButton op={opperation.op} id={opperation.id} key={opperation.id} />;
     });
 
     let PowerOff = <div></div>;
     const Display = this.props.power ? OpperationButtonGrid : PowerOff;
     //Return a grid containing all the buttons
     return (
-      <div class="center number-grid">
+      <div className="center number-grid">
         {Display}
-        
         <button
           onClick={(event) => {
             this.clearDisplay(event);
           }}
           id="clear"
+          key={"clear"}
         >
           Clear
         </button>
-
       </div>
     );
   }
