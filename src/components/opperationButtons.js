@@ -15,7 +15,6 @@ class OpperationButton extends Component {
       this.props.addDecimal(false);
       this.props.updateUpperDisplay(this.props.op);
       this.props.updateLowerDisplay(this.props.op);
-      this.props.clearLowerDisplay();
 
       if (display.id === "equals") {
         this.props.expEvaluated(true);
@@ -35,7 +34,11 @@ class OpperationButton extends Component {
           //console.log(filterOpperators.indexOf(value))
           return !(filterOpperators.includes(value)) ;
       });
-      
+       
+      //let filtered2 = this.props.upperDisplay.match(/(\*|\+|\/|-)?(\.|\-)?\d+/g).join('');
+      //console.log("FILTERED 2 : " +filtered2)
+
+
         console.log("FILTERED UPPER DISPLAY : " +filtered)
         console.log("UPPER DISPLAY : " +  this.props.upperDisplay)
 
