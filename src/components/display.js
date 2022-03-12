@@ -14,11 +14,11 @@ class Display extends Component {
     let lowerDisplay = this.props.power ? this.props.lowerDisplay : empty;
 
     return (
-      <div className="center">
-        <div className="upperDisplay">
+      <div className="center" >
+        <div className="upperDisplay"  >
           {upperDisplay != "" ? upperDisplay : "0"}
         </div>
-        <div className="lowerDisplay" id="display">
+        <div className="lowerDisplay" id="display" >
           {lowerDisplay != "" ? lowerDisplay : "0"}
         </div>
       </div>

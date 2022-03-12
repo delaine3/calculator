@@ -7,19 +7,17 @@ import OpperationButtonGrid from "./opperationButtonGrid";
 import NumberButtonGrid from "./numberButtonGrid";
 
 class Calculator extends Component {
-  constructor(props) {
-    super(props);
-  }
+ 
 
   render() {
     const isOn = (
-      <div class="outer-grid">
+      <div className="outer-grid">
         <br />
         <Display />
         <br />
         <OpperationButtonGrid />
         <NumberButtonGrid />
-        <div class="controls"></div>
+        <div className="controls"></div>
       </div>
     );
 
