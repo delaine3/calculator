@@ -24,7 +24,6 @@ class Calculator extends Component {
     const isOff = <div></div>;
 
     const powerState = this.props.power ? isOn : isOff;
-    //class={color}
     return (
       <div className="app center">
         <div>

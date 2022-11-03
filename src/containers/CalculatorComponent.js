@@ -8,6 +8,7 @@ class CalculatorComponent extends Component {
   render() {
     return (
       <div className="center">
+        <p className="blurb">This is a calculator created using React and Redux. Click on the buttons to opperate.</p>
         <Calculator />
       </div>
     );
