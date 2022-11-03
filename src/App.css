@@ -50,11 +50,15 @@ button {
   width: 60%;
   text-align: center;
 }
-.blurb{
-  margin: 50px;
+.blurb {
+  width: 50%;
+  padding: 10px;
+  margin: auto;
+  bottom: 0px;
+  text-align: left;
   text-shadow: #abc7fc 1px 5px 5px;
   font-size: large;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .power-button {
   cursor: pointer;
@@ -77,14 +81,12 @@ label {
   align-items: center;
 }
 .app {
-  margin-top: 50px;
   align-items: center;
   padding: 2%;
-  top: 30%;
   background-color: #fbc7fc;
   box-shadow: 0 4px 8px 0 #fbc7fc, 0 6px 20px 0 #fbc7fc;
   border: 1px solid;
-  height: 500px;
+  height: 460px;
   width: 340px;
   font-family: "Roboto Slab", serif;
 }
