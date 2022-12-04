@@ -2,8 +2,9 @@ export const numberList = [
   { id: "seven", num: 7 },
   { id: "eight", num: 8 },
   { id: "nine", num: 9 },
-  { id: "four", num: 4 },
-  { id: "five", num: 5 },
+  { id: "eight", num: 8 },
+
+  { id: "seven", num: 7 },
 
   { id: "six", num: 6 },
 
