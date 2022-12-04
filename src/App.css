@@ -14,12 +14,16 @@ button {
   height: 30px;
   box-shadow: 0 4px 8px 0 #fceca5, 0 6px 20px 0 #fceca5;
   border: solid 1px;
+  text-align: center;
+  vertical-align: middle;
 }
 .lowerDisplay {
   background-color: #cbc7fc;
   height: 30px;
   box-shadow: 0 4px 8px 0 #cbc7fc, 0 6px 20px 0 #cbc7fc;
   border: solid 1px;
+  text-align: center;
+  vertical-align: middle;
 }
 .opperationButton {
   /* center the cell content */
