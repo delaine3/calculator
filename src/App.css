@@ -16,6 +16,7 @@ button {
   border: solid 1px;
   text-align: center;
   vertical-align: middle;
+  padding: 4%;
 }
 .lowerDisplay {
   background-color: #cbc7fc;
@@ -24,6 +25,8 @@ button {
   border: solid 1px;
   text-align: center;
   vertical-align: middle;
+  padding: 4%;
+
 }
 .opperationButton {
   /* center the cell content */
