@@ -10,12 +10,12 @@ export const numberList = [
   { id: "five", num: 5 },
   { id: "six", num: 6 },
 
-
-  { id: "three", num: 3 },
+  { id: "one", num: 1 },
 
   { id: "two", num: 2 },
 
-  { id: "one", num: 1 },
+  { id: "three", num: 3 },
+
 
   { id: "zero", num: 0 },
   { id: "decimal", num: "." },
