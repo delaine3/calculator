@@ -4,11 +4,12 @@ export const numberList = [
 
  
  { id: "nine", num: 9 },
-  { id: "six", num: 6 },
+    { id: "four", num: 4 },
+
 
   { id: "five", num: 5 },
+  { id: "six", num: 6 },
 
-  { id: "four", num: 4 },
 
   { id: "three", num: 3 },
 
