@@ -16,7 +16,7 @@ button {
   border: solid 1px;
   text-align: center;
   vertical-align: middle;
-  padding: 4%;
+  padding: 1%;
 }
 .lowerDisplay {
   background-color: #cbc7fc;
@@ -25,7 +25,7 @@ button {
   border: solid 1px;
   text-align: center;
   vertical-align: middle;
-  padding: 4%;
+  padding: 1%;
 
 }
 .opperationButton {
@@ -93,7 +93,7 @@ label {
   background-color: #fbc7fc;
   box-shadow: 0 4px 8px 0 #fbc7fc, 0 6px 20px 0 #fbc7fc;
   border: 1px solid;
-  height: 560px;
+  height: 500px;
   width: 340px;
   font-family: "Roboto Slab", serif;
 }
