@@ -1,9 +1,9 @@
 export const numberList = [
-  { id: "nine", num: 9 },
+  { id: "seven", num: 7 },
   { id: "eight", num: 8 },
 
-  { id: "seven", num: 7 },
-
+ 
+ { id: "nine", num: 9 },
   { id: "six", num: 6 },
 
   { id: "five", num: 5 },
